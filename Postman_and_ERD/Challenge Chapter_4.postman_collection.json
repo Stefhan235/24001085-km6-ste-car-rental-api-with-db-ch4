@@ -1,0 +1,475 @@
+{
+	"info": {
+		"_postman_id": "788f2c33-3491-47d0-913c-375390e8fcaf",
+		"name": "Challenge Chapter_4",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33061696"
+	},
+	"item": [
+		{
+			"name": "GET Cars",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/cars",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"cars"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Car",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/cars/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"cars",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Customers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Reservations",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/reservations",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"reservations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Customer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/customers/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"customers",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Reservation",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/reservations/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"reservations",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Car",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "brand",
+							"value": "Mitsubishi",
+							"type": "text"
+						},
+						{
+							"key": "model",
+							"value": "Xpander",
+							"type": "text"
+						},
+						{
+							"key": "plate",
+							"value": "B1234QQ",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/lenov/Downloads/Mitsubishi-Xpander-2022.png"
+						},
+						{
+							"key": "type",
+							"value": "MPV",
+							"type": "text"
+						},
+						{
+							"key": "transmission",
+							"value": "matic",
+							"type": "text"
+						},
+						{
+							"key": "year",
+							"value": "2022",
+							"type": "text"
+						},
+						{
+							"key": "capacity",
+							"value": "7",
+							"type": "text"
+						},
+						{
+							"key": "rentPerDay",
+							"value": "350000",
+							"type": "text"
+						},
+						{
+							"key": "available",
+							"value": "true",
+							"type": "text"
+						},
+						{
+							"key": "availableAt",
+							"value": "2024-04-06T08:00:00.563Z",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/cars",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"cars"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Ani Cahyani\",\r\n    \"address\": \"Jl. Mawar Indah 5, Surabaya\",\r\n    \"phoneNumber\": \"628567890123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Reservation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"reservationDate\": \"2024-04-06T08:30:00.000Z\",\r\n    \"returnDate\": \"2024-04-08T08:30:00.000Z\",\r\n    \"car_id\": 4,\r\n    \"customer_id\": 4\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/reservations",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"reservations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Car",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "brand",
+							"value": "Mitsubishi",
+							"type": "text"
+						},
+						{
+							"key": "model",
+							"value": "Pajero Sport 4x4",
+							"type": "text"
+						},
+						{
+							"key": "plate",
+							"value": "A1234QQ",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/lenov/Downloads/pajero-sport.jpg"
+						},
+						{
+							"key": "type",
+							"value": "SUV",
+							"type": "text"
+						},
+						{
+							"key": "transmission",
+							"value": "matic",
+							"type": "text"
+						},
+						{
+							"key": "year",
+							"value": "2022",
+							"type": "text"
+						},
+						{
+							"key": "capacity",
+							"value": "7",
+							"type": "text"
+						},
+						{
+							"key": "rentPerDay",
+							"value": "700000",
+							"type": "text"
+						},
+						{
+							"key": "available",
+							"value": "true",
+							"type": "text"
+						},
+						{
+							"key": "availableAt",
+							"value": "2024-04-05T08:00:00.563Z",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/cars/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"cars",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Customer",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Ani Cahyani\",\r\n    \"address\": \"Jl. Melati Indah 5, Jakarta Timur\",\r\n    \"phoneNumber\": \"628567890123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/customers/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"customers",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Reservation",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"reservationDate\": \"2024-04-09T08:30:00.000Z\",\r\n    \"returnDate\": \"2024-04-12T08:30:00.000Z\",\r\n    \"car_id\": 3,\r\n    \"customer_id\": 4\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/reservations/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"reservations",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Car",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/cars/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"cars",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Customer",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/customers/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"customers",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Reservation",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/reservations/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"reservations",
+						"4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
