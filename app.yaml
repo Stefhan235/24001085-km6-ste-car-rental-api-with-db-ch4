@@ -1,6 +1,0 @@
-runtime: nodejs20
-service: stefhan-challenge-5
-
-predeploy:
-    - npm install
-    - npx sequelize db:migrate

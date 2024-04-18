@@ -1,11 +1,11 @@
 const express = require("express");
 const router = express.Router();
 const car = require("./car");
+const customer = require("./customer");
 const reservation = require("./reservation");
-const auth = require("./auth");
 
 router.use("/cars", car);
-router.use("/auth", auth);
+router.use("/customers", customer);
 router.use("/reservations", reservation);
 
 module.exports = router;

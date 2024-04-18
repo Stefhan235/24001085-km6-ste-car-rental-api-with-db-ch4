@@ -1,9 +1,9 @@
-const { car, user, reservation } = require("../models");
+const { car, customer, reservation } = require("../models");
 const { getData, setData, deleteData } = require("../helper/redis");
 
 exports.getReservations = async () => {
     const data = await reservation.findAll({
-        include: [{ model: user }, { model: car }],
+        include: [{ model: customer }, { model: car }],
     });
     return data;
 };
@@ -20,7 +20,7 @@ exports.getReservation = async (id) => {
         where: {
             id,
         },
-        include: [{ model: user }, { model: car }],
+        include: [{ model: customer }, { model: car }],
     });
     if (data.length > 0) {
         await setData(key, data[0], 300);
@@ -53,7 +53,7 @@ exports.updateReservation = async (id, payload) => {
         where: {
             id,
         },
-        include: [{ model: user }, { model: car }],
+        include: [{ model: customer }, { model: car }],
     });
     if (data.length > 0) {
         await setData(key, data[0], 300);

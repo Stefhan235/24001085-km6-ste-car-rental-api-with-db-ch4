@@ -1,6 +1,6 @@
 const crypto = require("crypto");
 const path = require("path");
-const { car, user, reservation } = require("../models");
+const { car, customer, reservation } = require("../models");
 const { uploader } = require("../helper/cloudinary");
 const { getData, setData, deleteData } = require("../helper/redis");
 

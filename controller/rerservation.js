@@ -35,7 +35,7 @@ exports.getReservation = async (req, res, next) => {
 
 exports.createReservation = async (req, res, next) => {
     try {
-        const { reservationDate, returnDate, car_id, user_id } = req.body;
+        const { reservationDate, returnDate, car_id, customer_id } = req.body;
         if (!reservationDate || reservationDate == "") {
             return next({
                 message: "Reservation Date must be provided!",
@@ -54,9 +54,9 @@ exports.createReservation = async (req, res, next) => {
                 statusCode: 404,
             });
         }
-        if (!user_id || user_id == "") {
+        if (!customer_id || customer_id == "") {
             return next({
-                message: "user_id must be provided!",
+                message: "customer_id must be provided!",
                 statusCode: 404,
             });
         }
@@ -65,7 +65,7 @@ exports.createReservation = async (req, res, next) => {
             reservationDate,
             returnDate,
             car_id,
-            user_id,
+            customer_id,
         });
 
         res.status(201).json({
@@ -80,7 +80,7 @@ exports.createReservation = async (req, res, next) => {
 exports.updateReservation = async (req, res, next) => {
     try {
         const { id } = req.params;
-        const { reservationDate, returnDate, car_id, user_id } = req.body;
+        const { reservationDate, returnDate, car_id, customer_id } = req.body;
         if (!reservationDate || reservationDate == "") {
             return next({
                 message: "Reservation Date must be provided!",
@@ -99,9 +99,9 @@ exports.updateReservation = async (req, res, next) => {
                 statusCode: 404,
             });
         }
-        if (!user_id || user_id == "") {
+        if (!customer_id || customer_id == "") {
             return next({
-                message: "user_id must be provided!",
+                message: "customer_id must be provided!",
                 statusCode: 404,
             });
         }
@@ -110,7 +110,7 @@ exports.updateReservation = async (req, res, next) => {
             reservationDate,
             returnDate,
             car_id,
-            user_id,
+            customer_id,
         });
 
         res.status(200).json({

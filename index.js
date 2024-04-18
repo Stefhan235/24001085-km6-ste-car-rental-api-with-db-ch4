@@ -5,7 +5,7 @@ const fileUpload = require("express-fileupload");
 const router = require("./routes");
 
 const app = express();
-const port = process.env.PORT || 4000;
+const port = 4000;
 
 app.use(express.json());
 app.use(
