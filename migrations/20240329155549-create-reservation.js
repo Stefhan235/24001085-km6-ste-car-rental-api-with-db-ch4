@@ -9,12 +9,12 @@ module.exports = {
                 primaryKey: true,
                 type: Sequelize.INTEGER,
             },
-            customer_id: {
+            user_id: {
                 type: Sequelize.INTEGER,
                 allowNull: false,
                 references: {
                     model: {
-                        tableName: "customers",
+                        tableName: "users",
                     },
                     key: "id",
                 },

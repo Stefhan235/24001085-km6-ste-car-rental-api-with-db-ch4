@@ -1,17 +1,26 @@
 const express = require("express");
 const router = express.Router();
-
 const reservationController = require("../controller/rerservation");
+const { authMiddleware } = require("../middleware/auth");
 
 router
     .route("/")
-    .get(reservationController.getReservations)
-    .post(reservationController.createReservation);
+    .get(
+        authMiddleware(["user", "admin"]),
+        reservationController.getReservations
+    )
+    .post(
+        authMiddleware(["user", "admin"]),
+        reservationController.createReservation
+    );
 
 router
     .route("/:id")
-    .get(reservationController.getReservation)
-    .put(reservationController.updateReservation)
-    .delete(reservationController.deleteReservation);
+    .get(
+        authMiddleware(["user", "admin"]),
+        reservationController.getReservation
+    )
+    .put(authMiddleware(["admin"]), reservationController.updateReservation)
+    .delete(authMiddleware(["admin"]), reservationController.deleteReservation);
 
 module.exports = router;

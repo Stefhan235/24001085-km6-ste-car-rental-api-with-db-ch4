@@ -10,8 +10,8 @@ module.exports = (sequelize, DataTypes) => {
         static associate(models) {
             // define association here
             reservation.belongsTo(models.car, { foreignKey: "car_id" });
-            reservation.belongsTo(models.customer, {
-                foreignKey: "customer_id",
+            reservation.belongsTo(models.user, {
+                foreignKey: "user_id",
             });
         }
     }
